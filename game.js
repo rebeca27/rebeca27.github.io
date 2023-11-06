@@ -1,7 +1,7 @@
 // Configuration object for your Phaser game
 var config = {
     type: Phaser.AUTO, // Phaser will use WebGL if available, if not it will use Canvas
-    width: 1000,
+    width: 800,
     height: 600,
     parent: 'gameContainer',
     scene: {
