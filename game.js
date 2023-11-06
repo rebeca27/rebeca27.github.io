@@ -36,35 +36,42 @@ function create() {
     let knight = this.add.sprite(400, 300, 'knight').setOrigin(0.5, 0.5);
 
     // Modern style for the buttons
-    let textStyle = {
-        fontSize: '24px', // smaller font size
+    let textStyle1 = {
+        fontSize: '18px', // Smaller font size
         fill: '#000', // Text color (black for modern look)
-        backgroundColor: '#ffffff', // Button background color (white for modern look)
+        backgroundColor: 'rgba(255,255,255,0.5)', // Semi-transparent white for a subtler look
         padding: {
-            x: 10,
+            x: 5,
             y: 5
         },
-        fixedWidth: 150, // Fixed width for smaller buttons
-        fixedHeight: 40, // Fixed height for smaller buttons
-        borderRadius: 5, // Rounded corners for buttons
-        borderColor: '#000000', // Border color (black)
-        borderThickness: 3, // Border thickness
+        fixedWidth: 120, // Smaller fixed width for the buttons
+        fixedHeight: 25, // Smaller fixed height for the buttons
+        fontFamily: 'Arial', // You can use any font loaded in your HTML
+    };
+
+    let textStyle2 = {
+        fontSize: '18px', // Smaller font size
+        fill: '#000', // Text color (black for modern look)
+        backgroundColor: 'rgba(255,255,255,0.5)', // Semi-transparent white for a subtler look
+        padding: {
+            x: 5,
+            y: 5
+        },
+        fixedWidth: 170, // Smaller fixed width for the buttons
+        fixedHeight: 25, // Smaller fixed height for the buttons
         fontFamily: 'Arial', // You can use any font loaded in your HTML
     };
 
 
     // Create interactive buttons
-    let btnMedieval = this.add.text(100, 100, 'Medieval Era', textStyle)
+    let btnMedieval = this.add.text(100, 100, 'Medieval Era', textStyle1)
         .setInteractive()
         .on('pointerdown', () => this.selectEra('medieval'))
-        .on('pointerover', () => btnMedieval.setStyle({
-            fill: '#ff0'
-        })) // Change color on hover
-        .on('pointerout', () => btnMedieval.setStyle({
-            fill: '#fff'
-        })); // Change color back on out
+        .on('pointerover', () => btnMedieval.setStyle({ fill: '#ddd' })) // Change color on hover
+        .on('pointerout', () => btnMedieval.setStyle({ fill: '#000' })); // Change color back on out
 
-    let btnTreaty = this.add.text(100, 200, 'Treaty of Versailles', textStyle)
+
+    let btnTreaty = this.add.text(100, 200, 'Treaty of Versailles', textStyle2)
         .setInteractive()
         .on('pointerdown', () => this.startTreatyEvent())
         .on('pointerover', () => btnTreaty.setStyle({
