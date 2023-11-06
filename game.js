@@ -30,6 +30,7 @@ function preload() {
 function create() {
     // Add the map as a background
     this.add.image(400, 300, 'medievalMap');
+    this.dialogueOptions = [];
 
     // Add the knight sprite to the game
     let knight = this.add.sprite(400, 300, 'knight').setOrigin(0.5, 0.5);
@@ -89,6 +90,9 @@ function startTreatyEvent() {
 }
 
 function displayDialogue(text, options) {
+    if (!this.dialogueOptions) {
+        this.dialogueOptions = [];
+    }
     // Clear previous dialogue options
     this.dialogueOptions.forEach(option => option.destroy());
     this.dialogueOptions = [];
