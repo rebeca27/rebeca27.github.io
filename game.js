@@ -11,8 +11,6 @@ var config = {
     }
 };
 
-// Initialize the game with your configuration
-var game = new Phaser.Game(config);
 
 function preload() {
     this.load.image('medievalMap', 'medieval_map.png');
