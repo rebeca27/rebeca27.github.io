@@ -49,7 +49,7 @@ function update(time, delta) {
 function selectEra(era) {
     // Load the appropriate map for the selected era
     console.log('Era selected:', era);
-    this.add.image(400, 300, era + 'Map');
+   // this.add.image(400, 300, era + 'Map');
 }
 
 function startTreatyEvent() {
